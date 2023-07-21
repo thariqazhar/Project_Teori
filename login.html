@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Form Login</title>
+    <link rel="stylesheet" href="assets/css/login.css">
+    <script>
+        function validateForm() {
+            var email = document.forms["loginForm"]["email"].value;
+            var password = document.forms["loginForm"]["password"].value;
+
+            // Cek apakah email dan password telah diisi
+            if (email == "" || password == "") {
+                alert("Mohon lengkapi email dan password.");
+                return false;
+            }
+
+            // Simulasikan login berhasil
+            alert("Login berhasil!");
+
+            // Mengarahkan ke halaman utama setelah login berhasil
+            window.location.href = "index.html";
+            return false; // Menghentikan pengiriman form
+        }
+    </script>
+</head>
+
+<body>
+    <h2>Lemon</h2>
+
+    <form name="loginForm" onsubmit="return validateForm()" method="post">
+        <div class="input-container">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email">
+        </div>
+
+        <div class="input-container">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password">
+        </div>
+
+        <input type="submit" value="Login">
+
+        <h1></h1>
+
+        <a href="register.html" class="register-btn">Register</a>
+    </form>
+</body>
+
+</html>
